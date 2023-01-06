@@ -16,7 +16,7 @@ function onSendMessage() {
 
 <template>
     <div class="container">
-        <h1>Contact Me</h1>
+        <h1 class="section-title">Contact Me</h1>
         <v-card class="card" elevation="3">
             <h2>Write me a message:</h2>
             <v-text-field
@@ -35,18 +35,6 @@ function onSendMessage() {
 </template>
 
 <style scoped>
-    .card {
-        max-width: 1100px;
-        width: 100%;
-    }
-
-    h1 {
-        font-weight: lighter;
-        font-size: 35px;
-        margin-top: 15px;
-        margin-bottom: 15px;
-    }
-
     h2 {
         font-weight: 300;
         font-size: 25px;
