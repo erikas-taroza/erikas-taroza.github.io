@@ -14,11 +14,16 @@ const info:Map<string, any> = new Map<string, any>([
 
 <template>
     <v-card class="card" elevation="3">
-        <div class="info">
-            <div v-for="i in info" style="display: flex; flex-direction: row; align-items: center;">
-                <p><strong>{{ i[0] }}</strong></p>
+        <div class="info-container">
+            <div
+                v-for="(item, i) in info"
+                class="info"
+                :key="i"
+                :style="{'border-top': i > 0 ? '1px solid black' : 'none'}"
+            >
+                <p><strong>{{ item[0] }}</strong></p>
                 <div style="width: 10px;"></div>
-                <p>{{ i[1] }}</p>
+                <p>{{ item[1] }}</p>
             </div>
         </div>
         <div class="bio">
@@ -49,7 +54,15 @@ Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed 
             max-width: 1100px;
             width: 100%;
             display: grid;
-            grid-template-columns: 1.2fr 2fr;
+            grid-template-columns: 1.1fr 2fr;
+        }
+
+        .bio {
+            margin-left: 15px;
+        }
+
+        .info-container {
+            margin-right: 15px;
         }
     }
 
@@ -58,7 +71,16 @@ Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed 
     }
 
     .info {
-        margin-bottom: 10px;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+        padding-top: 10px;
+        padding-bottom: 10px;
+    }
+
+    .info-container {
+        margin-bottom: 15px;
     }
 
     .bio p {
