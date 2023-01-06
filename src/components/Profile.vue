@@ -8,6 +8,12 @@
 
     <h1>Erikas Taroza</h1>
     <p>Full Stack Developer</p>
+
+    <div>
+        <v-btn
+            icon="mdi-github"
+        />
+    </div>
 </template>
 
 <style scoped>
