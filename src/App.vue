@@ -1,6 +1,6 @@
 <script setup lang="ts">
 import Profile from "./components/Profile.vue";
-import InfoCard from "./components/InfoCard.vue";
+import Info from "./components/Info.vue";
 import Skills from "./components/Skills.vue";
 import Contact from "./components/Contact.vue";
 </script>
@@ -10,7 +10,7 @@ import Contact from "./components/Contact.vue";
         <div class="header"></div>
         <div class="contents">
             <Profile/>
-            <InfoCard/>
+            <Info/>
             <Skills/>
             <Contact/>
         </div>
