@@ -18,8 +18,7 @@ const info:Map<string, any> = new Map<string, any>([
             <div
                 v-for="(item, i) in info"
                 class="info"
-                :key="i"
-                :style="{'border-top': i > 0 ? '1px solid black' : 'none'}"
+                :style="{'border-top': i > 0 ? '1px solid #CDCDCD' : 'none'}"
             >
                 <p><strong>{{ item[0] }}</strong></p>
                 <div style="width: 10px;"></div>
@@ -64,10 +63,6 @@ Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed 
         .info-container {
             margin-right: 15px;
         }
-    }
-
-    .card {
-        padding: 20px;
     }
 
     .info {

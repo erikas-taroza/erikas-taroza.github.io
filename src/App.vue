@@ -1,6 +1,7 @@
 <script setup lang="ts">
 import Profile from "./components/Profile.vue";
 import InfoCard from "./components/InfoCard.vue";
+import Contact from "./components/Contact.vue";
 </script>
 
 <template>
@@ -9,6 +10,7 @@ import InfoCard from "./components/InfoCard.vue";
         <div class="contents">
             <Profile/>
             <InfoCard/>
+            <Contact/>
         </div>
     </main>
 </template>

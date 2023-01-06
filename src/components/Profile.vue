@@ -35,12 +35,6 @@ function openLink(urlToOpen:string) {
 </template>
 
 <style scoped>
-    .container {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-    }
-
     .avatar {
         border-radius: 100%;
         background-color: black;
