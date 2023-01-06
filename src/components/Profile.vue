@@ -1,5 +1,8 @@
 <script setup lang="ts">
 
+function openLink(urlToOpen:string) {
+    window.open(urlToOpen);
+}
 </script>
 
 <template>
@@ -9,9 +12,22 @@
     <h1>Erikas Taroza</h1>
     <p>Full Stack Developer</p>
 
-    <div>
+    <div style="margin-top: 20px;">
         <v-btn
+            class="btn"
             icon="mdi-github"
+            color="primary"
+            width="40px"
+            height="40px"
+            @click="openLink('https://github.com/erikas-taroza')"
+        />
+        
+        <v-btn
+            class="btn"
+            icon="mdi-linkedin"
+            color="primary"
+            width="40px"
+            height="40px"
         />
     </div>
 </template>
@@ -27,12 +43,17 @@
     h1 {
         font-weight: lighter;
         font-size: 40px;
-        margin: 0px;
+        margin-top: 10px;
     }
 
     p {
         font-size: 16px;
         font-weight: normal;
         margin: 0px;
+    }
+
+    .btn {
+        margin-left: 7px;
+        margin-right: 7px;
     }
 </style>
