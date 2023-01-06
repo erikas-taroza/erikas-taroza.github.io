@@ -1,12 +1,14 @@
 <script setup lang="ts">
 
+const birthday = new Date("2005-02-14");
+
 const info:Map<string, any> = new Map<string, any>([
-    ["Age", 17],
+    // https://stackoverflow.com/a/50827764
+    ["Age", Math.floor((Date.now() - birthday.getTime()) / 3.15576e+10)],
     ["Country", "United States"],
     ["State", "Nevada"],
     ["Email", "erikastaroza@gmail.com"]
 ]);
-
 </script>
 
 <template>
