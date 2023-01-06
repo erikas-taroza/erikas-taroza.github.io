@@ -17,6 +17,7 @@ import InfoCard from "./components/InfoCard.vue";
     .contents {
         display: flex;
         flex-direction: column;
+        row-gap: 50px;
         align-items: center;
         width: 100%;
         padding-left: 10px;

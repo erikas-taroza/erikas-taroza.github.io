@@ -6,33 +6,41 @@ function openLink(urlToOpen:string) {
 </script>
 
 <template>
-    <div class="avatar">
-    </div>
+    <div class="container">
+        <div class="avatar">
+        </div>
 
-    <h1>Erikas Taroza</h1>
-    <p>Full Stack Developer</p>
+        <h1>Erikas Taroza</h1>
+        <p>Full Stack Developer</p>
 
-    <div style="margin-top: 20px;">
-        <v-btn
-            class="btn"
-            icon="mdi-github"
-            color="primary"
-            width="40px"
-            height="40px"
-            @click="openLink('https://github.com/erikas-taroza')"
-        />
-        
-        <v-btn
-            class="btn"
-            icon="mdi-linkedin"
-            color="primary"
-            width="40px"
-            height="40px"
-        />
+        <div style="margin-top: 20px;">
+            <v-btn
+                class="btn"
+                icon="mdi-github"
+                color="primary"
+                width="40px"
+                height="40px"
+                @click="openLink('https://github.com/erikas-taroza')"
+            />
+            
+            <v-btn
+                class="btn"
+                icon="mdi-linkedin"
+                color="primary"
+                width="40px"
+                height="40px"
+            />
+        </div>
     </div>
 </template>
 
 <style scoped>
+    .container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
     .avatar {
         border-radius: 100%;
         background-color: black;
