@@ -32,13 +32,17 @@ const projects = [
     {
         name: "SpotifyAntiAd",
         description: "A Windows program that skips Spotify ads by closing and reopening the client.",
-        image_urls: [],
+        image_urls: [
+            "./src/assets/img/spotify_anti_ad.png"
+        ],
         project_url: "https://github.com/erikas-taroza/SpotifyAntiAd"
     },
     {
         name: "EmailSpamCleaner",
         description: "An app that helps you clean your inbox and unsubscribe from emails.",
-        image_urls: [],
+        image_urls: [
+            "./src/assets/img/email_spam_cleaner.png"
+        ],
         project_url: "https://github.com/erikas-taroza/EmailSpamCleaner"
     },
 ];
