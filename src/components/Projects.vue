@@ -4,8 +4,10 @@ const projects = [
         name: "BitBeat",
         description: "A music player that provides ad-free music for no cost.",
         image_urls: [
-            "https://imgs.search.brave.com/bCGsnBpyx9O2a3FAiEn8itD2wN9YXDijDNugVpCUWGk/rs:fit:474:474:1/g:ce/aHR0cHM6Ly93d3cu/Zmx1d2VsLmNvbS9t/ZWRpYS9jYXRhbG9n/L3Byb2R1Y3QvY2Fj/aGUvNjU0ODUwM2Fh/ODMzZTY4ZmZkYzQ1/Yjc1YmU2ZGEyZTUv/Yy9vL2NvcHBlcl9p/bWFnZV9hLmpwZw",
-            "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b6/Image_created_with_a_mobile_phone.png/1280px-Image_created_with_a_mobile_phone.png"
+            "src/assets/img/bitbeat/1.png",
+            "src/assets/img/bitbeat/2.png",
+            "src/assets/img/bitbeat/3.png",
+            "src/assets/img/bitbeat/4.png",
         ],
         project_url: ""
     },
