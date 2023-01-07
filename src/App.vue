@@ -28,11 +28,17 @@ import Contact from "./components/Contact.vue";
         width: 100%;
         padding-left: 10px;
         padding-right: 10px;
+        /* For the profile picture, move up to overlap with header. */
+        position: relative;
+        top: -60px;
     }
 
     .header {
-        background-color: #F44336;
         height: 300px;
         width: 100%;
+        background-image: url("./assets/img/clouds-red.jpg");
+        background-position: center center;
+        background-size: cover;
+        background-attachment: fixed;
     }
 </style>
