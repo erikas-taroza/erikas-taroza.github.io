@@ -17,7 +17,7 @@ function onSendMessage() {
 <template>
     <div class="container">
         <h1 class="section-title">Contact Me</h1>
-        <v-card class="card" elevation="3">
+        <v-card class="card" elevation="2">
             <h2>Write me a message</h2>
             <v-text-field
                 v-model="subject"

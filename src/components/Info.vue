@@ -14,7 +14,7 @@ const info:Map<string, any> = new Map<string, any>([
 
 <template>
     <div class="container">
-        <v-card class="card" elevation="3">
+        <v-card class="card" elevation="2">
             <div class="info-container">
                 <div
                     v-for="(item, i) in info"

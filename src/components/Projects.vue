@@ -55,6 +55,7 @@ function onProjectClicked(project_url:string) {
                     max-width="353"
                     min-width="200"
                     height="300"
+                    elevation="2"
                     @click="project.project_url ? onProjectClicked(project.project_url) : null"
                 >
                     <!-- Display an image if there are 1 or 0 images. -->

@@ -6,7 +6,7 @@
     <div class="container">
         <h1 class="section-title">Skills</h1>
         <div class="grid">
-            <v-card class="card" elevation="3">
+            <v-card class="card" elevation="2">
                 <h2>What I have worked with</h2>
                 <div class="icons" style="">
                     <svg viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg" title="Flutter">
@@ -47,7 +47,7 @@
                 <p>Unity</p>
             </v-card>
 
-            <v-card class="card" elevation="3">
+            <v-card class="card" elevation="2">
                 <h2>Languages I know</h2>
                 <div class="icons">
                     <svg viewBox="-16 0 288 288" xmlns="http://www.w3.org/2000/svg" title="C#">
