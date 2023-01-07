@@ -2,6 +2,7 @@
 import Profile from "./components/Profile.vue";
 import Info from "./components/Info.vue";
 import Skills from "./components/Skills.vue";
+import Projects from "./components/Projects.vue";
 import Contact from "./components/Contact.vue";
 </script>
 
@@ -12,6 +13,7 @@ import Contact from "./components/Contact.vue";
             <Profile/>
             <Info/>
             <Skills/>
+            <Projects/>
             <Contact/>
         </div>
     </main>
