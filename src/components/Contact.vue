@@ -4,6 +4,11 @@ import { ref } from "vue";
 const subject = ref("");
 const message = ref("");
 
+function validateInput(input:String) : string | boolean {
+    if(input.trim().length <= 0) return "This field is required.";
+    return true;
+}
+
 function onSendMessage() {
     //TODO: Use third party email API.
     window.open(`mailto:erikastaroza@gmail.com?subject=${subject.value}&body=${message.value}`);
@@ -23,13 +28,22 @@ function onSendMessage() {
                 v-model="subject"
                 density="comfortable"
                 label="Subject"
+                :rules="[validateInput]"
             />
             <v-textarea
                 v-model="message"
                 density="comfortable"
                 label="Message"
+                :rules="[validateInput]"
             />
-            <v-btn variant="flat" color="primary" @click="onSendMessage()">Send Message</v-btn>
+            <v-btn
+                variant="flat"
+                color="primary"
+                @click="onSendMessage()"
+                :disabled="validateInput(subject) !== true || validateInput(message) !== true"
+            >
+                Send Message
+            </v-btn>
         </v-card>
     </div>
 </template>
