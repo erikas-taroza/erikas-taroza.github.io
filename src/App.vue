@@ -1,4 +1,5 @@
 <script setup lang="ts">
+import Navbar from "./components/Navbar.vue";
 import Profile from "./components/Profile.vue";
 import Info from "./components/Info.vue";
 import Skills from "./components/Skills.vue";
@@ -8,13 +9,16 @@ import Contact from "./components/Contact.vue";
 
 <template>
     <main>
+        <Navbar/>
         <div class="header"></div>
         <div class="contents">
-            <Profile/>
-            <Info/>
-            <Skills/>
-            <Projects/>
-            <Contact/>
+            <div id="Home">
+                <Profile style="margin-bottom: 50px;"/>
+                <Info/>
+            </div>
+            <Skills id="Skills"/>
+            <Projects id="Projects"/>
+            <Contact id="Contact"/>
         </div>
     </main>
 </template>

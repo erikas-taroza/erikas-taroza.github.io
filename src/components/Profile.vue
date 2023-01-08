@@ -1,8 +1,5 @@
 <script setup lang="ts">
-
-function openLink(urlToOpen:string) {
-    window.open(urlToOpen);
-}
+import Socials from "./Socials.vue";
 </script>
 
 <template>
@@ -13,24 +10,7 @@ function openLink(urlToOpen:string) {
         <h1>Erikas Taroza</h1>
         <p>Full Stack Developer</p>
 
-        <div style="margin-top: 20px;">
-            <v-btn
-                class="btn"
-                icon="mdi-github"
-                color="primary"
-                width="40px"
-                height="40px"
-                @click="openLink('https://github.com/erikas-taroza')"
-            />
-            
-            <v-btn
-                class="btn"
-                icon="mdi-linkedin"
-                color="primary"
-                width="40px"
-                height="40px"
-            />
-        </div>
+        <Socials style="margin-top: 20px;"/>
     </div>
 </template>
 
@@ -52,10 +32,5 @@ function openLink(urlToOpen:string) {
         font-size: 16px;
         font-weight: normal;
         margin: 0px;
-    }
-
-    .btn {
-        margin-left: 7px;
-        margin-right: 7px;
     }
 </style>
