@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import Navbar from "./components/Navbar.vue";
+import Navbar from "./components/navigation/Navbar.vue";
 import Profile from "./components/Profile.vue";
 import Info from "./components/Info.vue";
 import Skills from "./components/Skills.vue";
