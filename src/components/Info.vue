@@ -10,6 +10,13 @@ const info:Map<string, any> = new Map<string, any>([
     ["Email", "erikastaroza@gmail.com"]
 ]);
 
+function goTo(id:string) {
+    let element = document.getElementById(id);
+    if(!element) return;
+
+    window.scrollTo(0, element.offsetTop);
+}
+
 </script>
 
 <template>
@@ -40,7 +47,7 @@ const info:Map<string, any> = new Map<string, any>([
                         Download CV
                     </v-btn>
 
-                    <v-btn color="#EEEEEE" variant="flat">
+                    <v-btn color="#EEEEEE" variant="flat" @click="goTo('Contact')">
                         Contact Me
                     </v-btn>
                 </div>
