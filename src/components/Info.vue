@@ -2,13 +2,13 @@
 
 const birthday = new Date("2005-02-14");
 
-const info:Map<string, any> = new Map<string, any>([
+const info = [
     // https://stackoverflow.com/a/50827764
-    ["Age", Math.floor((Date.now() - birthday.getTime()) / 3.15576e+10)],
-    ["Country", "United States"],
-    ["State", "Nevada"],
-    ["Email", "erikastaroza@gmail.com"]
-]);
+    { key: "Age", value: Math.floor((Date.now() - birthday.getTime()) / 3.15576e+10) },
+    { key: "Country", value: "United States" },
+    { key: "State", value: "Nevada" },
+    { key: "Email", value: "erikastaroza@gmail.com" }
+];
 
 function goTo(id:string) {
     let element = document.getElementById(id);
@@ -28,9 +28,9 @@ function goTo(id:string) {
                     class="info"
                     :style="{'border-top': i > 0 ? '1px solid #CDCDCD' : 'none'}"
                 >
-                    <p><strong>{{ item[0] }}</strong></p>
+                    <p><strong>{{ item.key }}</strong></p>
                     <div style="width: 10px;"></div>
-                    <p>{{ item[1] }}</p>
+                    <p>{{ item.value }}</p>
                 </div>
             </div>
             <div class="bio">
