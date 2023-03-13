@@ -1,4 +1,5 @@
 <script setup lang="ts">
+import router from "@/router";
 import { onMounted, ref } from "vue";
 
 onMounted(async () => {
@@ -29,6 +30,12 @@ function goTo(id: string) {
     window.scrollTo(0, element.offsetTop);
 }
 
+function goToCV() {
+    router.push({
+        name: "cv"
+    });
+}
+
 </script>
 
 <template>
@@ -54,6 +61,7 @@ function goTo(id: string) {
                         color="primary"
                         variant="flat"
                         style="margin-right: 20px;"
+                        @click="goToCV()"
                     >
                         Go to CV
                     </v-btn>
