@@ -47,7 +47,7 @@ const projects = [
     },
 ];
 
-function onProjectClicked(project_url:string) {
+function onProjectClicked(project_url: string) {
     window.open(project_url);
 }
 </script>

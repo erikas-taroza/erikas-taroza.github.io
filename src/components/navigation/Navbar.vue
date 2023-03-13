@@ -13,29 +13,18 @@ onBeforeUnmount(() => {
     window.removeEventListener("resize", onResize);
 });
 
-var timeout:number | null = null;
-function debounce(callback:() => void) {
-    if(timeout) clearTimeout(timeout);
-
-    timeout = setTimeout(() => {
-        callback();
-    }, 50);
-}
-
 function onScroll() {
-    debounce(() => {
-        buttons.forEach((button) => {
-            let element = document.getElementById(button);
-            if(!element) return;
+    buttons.forEach((button) => {
+        let element = document.getElementById(button);
+        if(!element) return;
 
-            if(
-                element.getBoundingClientRect().bottom <= window.innerHeight
-                || element.offsetTop <= window.scrollY
-            )
-            {
-                activeButton.value = button;
-            }
-        });
+        if(
+            element.getBoundingClientRect().bottom <= window.innerHeight
+            || element.offsetTop <= window.scrollY
+        )
+        {
+            activeButton.value = button;
+        }
     });
 }
 
@@ -53,7 +42,7 @@ const buttons = [
     "Contact"
 ]
 
-function goTo(id:string) {
+function goTo(id: string) {
     let element = document.getElementById(id);
     if(!element) return;
 

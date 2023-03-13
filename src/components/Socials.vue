@@ -4,7 +4,7 @@ import { defineProps } from "vue";
 const {
     flat
 } = defineProps({
-    flat:Boolean
+    flat: Boolean
 });
 
 function openLink(urlToOpen:string) {

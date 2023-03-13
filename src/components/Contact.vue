@@ -4,7 +4,7 @@ import { ref } from "vue";
 const subject = ref("");
 const message = ref("");
 
-function validateInput(input:String) : string | boolean {
+function validateInput(input: String) : string | boolean {
     if(input.trim().length <= 0) return "This field is required.";
     return true;
 }

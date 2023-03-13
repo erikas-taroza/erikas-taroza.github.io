@@ -10,7 +10,7 @@ const info = [
     { key: "Email", value: "erikastaroza@gmail.com" }
 ];
 
-function goTo(id:string) {
+function goTo(id: string) {
     let element = document.getElementById(id);
     if(!element) return;
 
