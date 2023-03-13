@@ -1,5 +1,4 @@
 <script setup lang="ts">
-import { defineProps, defineEmits, ref } from "vue";
 import Socials from '../Socials.vue';
 
 const {

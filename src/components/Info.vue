@@ -1,4 +1,15 @@
 <script setup lang="ts">
+import { onMounted, ref } from "vue";
+
+onMounted(async () => {
+    // Get the about text from the resume HTML file.
+    let resume = await (await fetch("src/assets/resume.html")).text();
+    aboutText.value = resume
+        .split('<p style="margin-top: 30px;" id="about">')[1]
+        .split("</p>")[0];
+});
+
+const aboutText = ref("");
 
 const birthday = new Date("2005-02-14");
 
@@ -10,6 +21,7 @@ const info = [
     { key: "Email", value: "erikastaroza@gmail.com" }
 ];
 
+// Used for the "Contact Me" button.
 function goTo(id: string) {
     let element = document.getElementById(id);
     if(!element) return;
@@ -35,8 +47,7 @@ function goTo(id: string) {
             </div>
             <div class="bio">
                 <p><strong>Hello! I'm Erikas Taroza</strong></p>
-                <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit. Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque.
-    Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores.</p>
+                <p>{{ aboutText }}</p>
             
                 <div style="margin-top: 20px;">
                     <v-btn
@@ -44,7 +55,7 @@ function goTo(id: string) {
                         variant="flat"
                         style="margin-right: 20px;"
                     >
-                        Download CV
+                        Go to CV
                     </v-btn>
 
                     <v-btn color="#EEEEEE" variant="flat" @click="goTo('Contact')">
