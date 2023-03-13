@@ -1,16 +1,10 @@
 <script setup lang="ts">
+import { resume } from "@/main";
 import router from "@/router";
-import { onMounted, ref } from "vue";
 
-onMounted(async () => {
-    // Get the about text from the resume HTML file.
-    let resume = await (await fetch("src/assets/resume.html")).text();
-    aboutText.value = resume
-        .split('<p style="margin-top: 30px;" id="about">')[1]
+const aboutText = resume
+    .split('<p style="margin-top: 30px;" id="about">')[1]
         .split("</p>")[0];
-});
-
-const aboutText = ref("");
 
 const birthday = new Date("2005-02-14");
 
