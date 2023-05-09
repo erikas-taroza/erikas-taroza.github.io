@@ -31,6 +31,7 @@ function openLink(urlToOpen:string) {
             :elevation="!flat ? 3 : 0"
             width="40"
             height="40"
+            @click="openLink('https://www.linkedin.com/in/erikas-taroza-54a949259/')"
         >
             <v-icon :color="!flat ? 'white' : '#4B4B4B'">mdi-linkedin</v-icon>
         </v-btn>
