@@ -4,8 +4,7 @@ import Socials from "./Socials.vue";
 
 <template>
     <div class="container">
-        <div class="avatar">
-        </div>
+        <img class="avatar" src="@/assets/img/portrait.jpg"/>
 
         <h1>Erikas Taroza</h1>
         <p>Full Stack Developer</p>
@@ -17,9 +16,9 @@ import Socials from "./Socials.vue";
 <style scoped>
     .avatar {
         border-radius: 100%;
-        background-color: black;
         width: 120px;
         height: 120px;
+        object-fit: cover;
     }
 
     h1 {
