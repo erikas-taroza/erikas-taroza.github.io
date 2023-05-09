@@ -1,10 +1,16 @@
 <script setup lang="ts">
-import { resume } from "@/main";
 import router from "@/router";
+import { ref, onMounted } from "vue";
 
-const aboutText = resume
-    .split('<p style="margin-top: 30px;" id="about">')[1]
+onMounted(async () => {
+    const text = await (await fetch("src/assets/resume/resume.html")).text();
+    const info = text
+        .split('<p style="margin-top: 30px;" id="about">')[1]
         .split("</p>")[0];
+    aboutText.value = info;
+});
+
+const aboutText = ref("");
 
 const birthday = new Date("2005-02-14");
 
