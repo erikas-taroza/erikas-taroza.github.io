@@ -2,4 +2,4 @@
 
 My portfolio website.
 
-Please go to [erikastaroza.com](erikastaroza.com).
+Please go to [erikastaroza.com](https://erikastaroza.com).
