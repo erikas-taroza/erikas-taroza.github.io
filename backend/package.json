@@ -4,7 +4,7 @@
   "description": "",
   "main": "dist/index.js",
   "scripts": {
-    "start": "tsc && node dist/index.js"
+    "start": "npm run --prefix ../website build && tsc && node dist/index.js"
   },
   "keywords": [],
   "author": "",
