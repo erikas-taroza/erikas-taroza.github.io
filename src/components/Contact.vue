@@ -30,7 +30,7 @@ function onSendMessage()
     message.value = "";
     error.value = "";
 
-    fetch("backend.erikastaroza.com:7777/send_mail", {
+    fetch("https://backend.erikastaroza.com:7777/send_mail", {
         method: "POST",
         headers: {
             "Content-Type": "application/json"
