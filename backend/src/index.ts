@@ -19,7 +19,7 @@ app.post("/send_mail", async (req, res) => {
         from: string,
         subject: string,
         message: string
-    } = JSON.parse(req.body);
+    } = req.body;
 
     info.message += '\n\nSent from "erikastaroza.com"';
 

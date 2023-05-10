@@ -33,6 +33,9 @@ function onSendMessage()
 
     fetch("/send_mail", {
         method: "POST",
+        headers: {
+            "Content-Type": "application/json"
+        },
         body: JSON.stringify(email)
     })
         .then(async (res) => {
