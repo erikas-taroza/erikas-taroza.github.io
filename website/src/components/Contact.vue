@@ -20,10 +20,26 @@ function validateEmail(input: String): string | boolean {
 
 function onSendMessage()
 {
+    const email = {
+        "from": from.value,
+        "subject": subject.value,
+        "message": message.value
+    };
+
     from.value = "";
     subject.value = "";
     message.value = "";
     error.value = "";
+
+    fetch("/send_mail", {
+        method: "POST",
+        body: JSON.stringify(email)
+    })
+        .then(async (res) => {
+            if(res.status != 200) {
+                error.value = await res.text();
+            }
+        });
 }
 
 </script>
