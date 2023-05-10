@@ -15,15 +15,18 @@ app.get("/", (_, res) => {
 });
 
 app.post("/send_mail", async (req, res) => {
-    const from = req.body["from"];
-    const subject = req.body["subject"];
-    let message = req.body["message"];
-    message += '\n\nSent from "erikastaroza.com"';
+    const info: {
+        from: string,
+        subject: string,
+        message: string
+    } = JSON.parse(req.body);
+
+    info.message += '\n\nSent from "erikastaroza.com"';
 
     const mail: MailDataRequired = {
-        replyTo: from,
-        subject,
-        text: message,
+        replyTo: info.from,
+        subject: info.subject,
+        text: info.message,
         from: "erikastaroza@gmail.com",
         to: "erikastaroza@gmail.com"
     };

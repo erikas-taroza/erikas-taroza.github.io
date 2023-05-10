@@ -21,9 +21,9 @@ function validateEmail(input: String): string | boolean {
 function onSendMessage()
 {
     const email = {
-        "from": from.value,
-        "subject": subject.value,
-        "message": message.value
+        from: from.value,
+        subject: subject.value,
+        message: message.value
     };
 
     from.value = "";
