@@ -1,4 +1,7 @@
 <script setup lang="ts">
+import resumePdf from "@/assets/resume/resume.pdf";
+import resumeHtml from "@/assets/resume/resume.html?url";
+
 import router from "@/router";
 import { onMounted } from "vue";
 
@@ -32,7 +35,7 @@ function goToHome() {
                 variant="flat"
                 style="margin-right: 20px;"
                 download
-                href="src/assets/resume/resume.pdf"
+                :href="resumePdf"
             >
                 Download (PDF)
             </v-btn>
@@ -40,7 +43,7 @@ function goToHome() {
 
         <iframe
             id="resume"
-            src="src/assets/resume/resume.html"
+            :src="resumeHtml"
             frameborder="0"
             width="100%"
         >

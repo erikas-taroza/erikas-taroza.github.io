@@ -1,13 +1,21 @@
 <script setup lang="ts">
+import bitbeat1 from "@/assets/img/bitbeat/1.png";
+import bitbeat2 from "@/assets/img/bitbeat/2.png";
+import bitbeat3 from "@/assets/img/bitbeat/3.png";
+import bitbeat4 from "@/assets/img/bitbeat/4.png";
+import spotifyAntiAd from "@/assets/img/spotify_anti_ad.png";
+import emailSpamCleaner from "@/assets/img/email_spam_cleaner.png";
+import github from "@/assets/img/github.png";
+
 const projects = [
     {
         name: "BitBeat",
         description: "A music player that provides ad-free music for no cost.",
         image_urls: [
-            "src/assets/img/bitbeat/1.png",
-            "src/assets/img/bitbeat/2.png",
-            "src/assets/img/bitbeat/3.png",
-            "src/assets/img/bitbeat/4.png",
+            bitbeat1,
+            bitbeat2,
+            bitbeat3,
+            bitbeat4,
         ],
         project_url: ""
     },
@@ -33,7 +41,7 @@ const projects = [
         name: "SpotifyAntiAd",
         description: "A Windows program that skips Spotify ads by closing and reopening the client.",
         image_urls: [
-            "./src/assets/img/spotify_anti_ad.png"
+            spotifyAntiAd
         ],
         project_url: "https://github.com/erikas-taroza/SpotifyAntiAd"
     },
@@ -41,7 +49,7 @@ const projects = [
         name: "EmailSpamCleaner",
         description: "An app that helps you clean your inbox and unsubscribe from emails.",
         image_urls: [
-            "./src/assets/img/email_spam_cleaner.png"
+            emailSpamCleaner
         ],
         project_url: "https://github.com/erikas-taroza/EmailSpamCleaner"
     },
@@ -69,7 +77,7 @@ function onProjectClicked(project_url: string) {
                         v-if="project.image_urls!.length <= 1"
                         height="200px"
                         :cover="project.image_urls!.length == 1"
-                        :src="project.image_urls!.length == 1 ? project.image_urls[0] : 'src/assets/img/github.png'"
+                        :src="project.image_urls!.length == 1 ? project.image_urls[0] : github"
                     />
 
                     <!-- Display a slideshow of images if there are more than one provided. -->

@@ -38,7 +38,7 @@ import Contact from "../components/Contact.vue";
     .header {
         height: 300px;
         width: 100%;
-        background-image: url("../assets/img/clouds-red.jpg");
+        background-image: url("@/assets/img/clouds-red.jpg");
         background-position: center center;
         background-size: cover;
         background-attachment: fixed;
