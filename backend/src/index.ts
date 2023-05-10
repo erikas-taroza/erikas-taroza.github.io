@@ -21,11 +21,11 @@ app.post("/send_mail", async (req, res) => {
     message += '\n\nSent from "erikastaroza.com"';
 
     const mail: MailDataRequired = {
+        replyTo: from,
         subject,
         text: message,
         from: "erikastaroza@gmail.com",
-        to: "erikastaroza@gmail.com",
-        replyTo: "erikastaroza@gmail.com"
+        to: "erikastaroza@gmail.com"
     };
 
     sendgrid.send(mail)
