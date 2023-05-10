@@ -17,13 +17,15 @@ app.get("/", (_, res) => {
 app.post("/send_mail", async (req, res) => {
     const from = req.body["from"];
     const subject = req.body["subject"];
-    const message = req.body["message"];
+    let message = req.body["message"];
+    message += '\n\nSent from "erikastaroza.com"';
 
     const mail: MailDataRequired = {
-        from,
         subject,
         text: message,
-        to: "erikastaroza@gmail.com"
+        from: "erikastaroza@gmail.com",
+        to: "erikastaroza@gmail.com",
+        replyTo: "erikastaroza@gmail.com"
     };
 
     sendgrid.send(mail)

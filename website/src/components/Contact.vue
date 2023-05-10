@@ -1,8 +1,6 @@
 <script setup lang="ts">
 import { ref } from "vue";
 
-import sendgrid, { type MailDataRequired } from "@sendgrid/mail";
-
 const from = ref("");
 const subject = ref("");
 const message = ref("");
@@ -22,24 +20,10 @@ function validateEmail(input: String): string | boolean {
 
 function onSendMessage()
 {
-    const email: MailDataRequired = {
-        to: "erikastaroza@gmail.com",
-        from: from.value,
-        subject: subject.value,
-        text: message.value + '\n\nSent via "erikastaroza.com"'
-    };
-
     from.value = "";
     subject.value = "";
     message.value = "";
     error.value = "";
-
-    sendgrid.send(email)
-        .then(() => {
-            console.log("success");
-        }, err => {
-            error.value = err;
-        });
 }
 
 </script>
