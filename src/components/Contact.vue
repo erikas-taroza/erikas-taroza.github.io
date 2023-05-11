@@ -148,6 +148,5 @@ function onSendMessage()
     .success {
         color: limegreen;
         text-align: start;
-        font-weight: 300;
     }
 </style>
