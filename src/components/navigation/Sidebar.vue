@@ -12,8 +12,8 @@ const {
 });
 
 defineEmits<{
-    (event: "buttonPressed", button:string):void
-    (event: "close"):void
+    buttonPressed: [button: string],
+    close: []
 }>();
 
 </script>
