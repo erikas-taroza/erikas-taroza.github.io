@@ -26,7 +26,7 @@ function goToCV() {
                 <p><strong>Hello! I'm Erikas Taroza</strong></p>
                 <p>{{ aboutText }}</p>
 
-                <p><span style="font-weight: bold; color: rgb(244, 67, 54)">Location:</span> Nevada, United States</p>
+                <p><span class="bold-red-text">Location:</span> Nevada, United States</p>
 
                 <div style="margin-top: 20px">
                     <v-btn color="primary" variant="flat" style="margin-right: 20px" @click="goToCV()">

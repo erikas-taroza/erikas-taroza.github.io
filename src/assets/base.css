@@ -1,6 +1,7 @@
 :root {
     --text-color: black;
     --background-color: #eeeeee;
+    --color-red: rgb(244, 67, 54);
 }
 
 body {
