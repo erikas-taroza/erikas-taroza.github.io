@@ -2,15 +2,7 @@
 import router from "@/router";
 import resume from "@/assets/resume/resume.html?raw";
 
-const aboutText = resume.split('<p style="margin-top: 30px;" id="about">')[1].split("</p>")[0];
-
-const birthday = new Date("2005-02-14");
-
-const info = [
-    // https://stackoverflow.com/a/50827764
-    { key: "Country", value: "United States" },
-    { key: "State", value: "Nevada" },
-];
+const aboutText = resume.split('<p style="margin-top: 30px" id="about">')[1].split("</p>")[0];
 
 // Used for the "Contact Me" button.
 function goTo(id: string) {
@@ -29,23 +21,12 @@ function goToCV() {
 
 <template>
     <div class="container">
-        <v-card class="card" elevation="2">
-            <div class="info-container">
-                <div
-                    v-for="(item, i) in info"
-                    class="info"
-                    :style="{ 'border-top': i > 0 ? '1px solid #CDCDCD' : 'none' }"
-                >
-                    <p>
-                        <strong>{{ item.key }}</strong>
-                    </p>
-                    <div style="width: 10px"></div>
-                    <p>{{ item.value }}</p>
-                </div>
-            </div>
+        <v-card class="card" elevation="2" style="max-width: 750px">
             <div class="bio">
                 <p><strong>Hello! I'm Erikas Taroza</strong></p>
                 <p>{{ aboutText }}</p>
+
+                <p><span style="font-weight: bold; color: rgb(244, 67, 54)">Location:</span> Nevada, United States</p>
 
                 <div style="margin-top: 20px">
                     <v-btn color="primary" variant="flat" style="margin-right: 20px" @click="goToCV()">
@@ -61,17 +42,8 @@ function goToCV() {
 
 <style scoped>
 @media (min-width: 800px) {
-    .card {
-        display: grid;
-        grid-template-columns: 1.1fr 2fr;
-    }
-
     .bio {
-        margin-left: 15px;
-    }
-
-    .info-container {
-        margin-right: 15px;
+        margin: 10px 15px;
     }
 }
 
@@ -82,10 +54,6 @@ function goToCV() {
     justify-content: space-between;
     padding-top: 10px;
     padding-bottom: 10px;
-}
-
-.info-container {
-    margin-bottom: 15px;
 }
 
 .bio p {
