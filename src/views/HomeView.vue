@@ -28,8 +28,7 @@ import Contact from "../components/Contact.vue";
     row-gap: 50px;
     align-items: center;
     width: 100%;
-    padding-left: 10px;
-    padding-right: 10px;
+    padding: 0 20px;
     /* For the profile picture, move up to overlap with header. */
     position: relative;
     top: -60px;
