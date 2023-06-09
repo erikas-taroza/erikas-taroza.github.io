@@ -60,6 +60,7 @@
                 <p>JavaScript</p>
                 <p class="bold-red-text">Backend</p>
                 <p>Rust</p>
+                <p>JavaScript</p>
                 <p class="bold-red-text">Other</p>
                 <p>C#</p>
                 <p>Java</p>
@@ -82,9 +83,9 @@
 
 @media (max-width: 800px) {
     .grid {
-        display: grid;
-        grid-template-rows: 1fr 1fr;
-        width: 75%;
+        display: flex;
+        flex-direction: column;
+        width: 100%;
         row-gap: 20px;
     }
 }
