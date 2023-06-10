@@ -16,13 +16,9 @@ onBeforeUnmount(() => {
 function onScroll() {
     buttons.forEach((button) => {
         let element = document.getElementById(button);
-        if(!element) return;
+        if (!element) return;
 
-        if(
-            element.getBoundingClientRect().bottom <= window.innerHeight
-            || element.offsetTop <= window.scrollY
-        )
-        {
+        if (element.getBoundingClientRect().bottom <= window.innerHeight || element.offsetTop <= window.scrollY) {
             activeButton.value = button;
         }
     });
@@ -35,20 +31,14 @@ function onResize() {
 }
 
 const activeButton = ref("Home");
-const buttons = [
-    "Home",
-    "Skills",
-    "Projects",
-    "Contact"
-]
+const buttons = ["Home", "Skills", "Projects", "Contact"];
 
 function goTo(id: string) {
     let element = document.getElementById(id);
-    if(!element) return;
+    if (!element) return;
 
     window.scrollTo(0, element.offsetTop);
 }
-
 </script>
 
 <template>
@@ -65,17 +55,13 @@ function goTo(id: string) {
             </v-btn>
         </div>
 
-        <Socials flat/>
+        <Socials flat />
     </div>
 
     <div class="navbar" v-else>
-        <v-btn
-            elevation="0"
-            icon="mdi-menu"
-            @click="isSidebarOpen = true"
-        />
+        <v-btn elevation="0" icon="mdi-menu" @click="isSidebarOpen = true" />
     </div>
-    
+
     <Sidebar
         v-if="showSidebar"
         :buttons="buttons"
@@ -87,19 +73,19 @@ function goTo(id: string) {
 </template>
 
 <style scoped>
-    .navbar {
-        height: 60px;
-        width: 100%;
-        background-color: white;
-        position: sticky;
-        top: 0;
-        z-index: 10;
-        box-shadow: 0px 1px 5px 3px rgba(0, 0, 0, 0.2);
-        display: flex;
-        flex-direction: row;
-        align-items: center;
-        padding-left: 50px;
-        padding-right: 50px;
-        justify-content: space-between;
-    }
+.navbar {
+    height: 60px;
+    width: 100%;
+    background-color: white;
+    position: sticky;
+    top: 0;
+    z-index: 10;
+    box-shadow: 0px 1px 5px 3px rgba(0, 0, 0, 0.2);
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding-left: 50px;
+    padding-right: 50px;
+    justify-content: space-between;
+}
 </style>

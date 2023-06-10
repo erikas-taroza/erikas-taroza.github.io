@@ -9,14 +9,14 @@ const router = createRouter({
         {
             path: "/",
             name: "home",
-            component: HomeView
+            component: HomeView,
         },
         {
             path: "/cv",
             name: "cv",
-            component: ResumeView
-        }
-    ]
+            component: ResumeView,
+        },
+    ],
 });
 
 export default router;

@@ -8,9 +8,9 @@ export default createVuetify({
         themes: {
             my_theme: {
                 colors: {
-                    primary: "#F44336"
-                }
-            }
-        }
-    }
+                    primary: "#F44336",
+                },
+            },
+        },
+    },
 });

@@ -1,8 +1,8 @@
-@import './base.css';
+@import "./base.css";
 
 .card {
     padding: 20px;
-    width: 100%
+    width: 100%;
 }
 
 .container {
@@ -18,4 +18,9 @@
     font-size: 35px;
     margin-top: 15px;
     margin-bottom: 15px;
+}
+
+.bold-red-text {
+    font-weight: bold;
+    color: var(--color-red);
 }
