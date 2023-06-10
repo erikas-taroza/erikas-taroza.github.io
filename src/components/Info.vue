@@ -21,7 +21,7 @@ function goToCV() {
 
 <template>
     <div class="container">
-        <v-card class="card" elevation="2" style="max-width: 750px">
+        <v-card class="card" elevation="2" style="max-width: 900px">
             <div class="bio">
                 <p><strong>Hello! I'm Erikas Taroza</strong></p>
                 <p>{{ aboutText }}</p>

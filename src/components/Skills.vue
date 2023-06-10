@@ -66,15 +66,34 @@
                 <p>Java</p>
                 <p>Python</p>
             </v-card>
+            <v-card class="card" elevation="2" style="grid-column-end: span 2">
+                <h2>General</h2>
+                <div class="general">
+                    <li style="font-size: 1em">Critical Thinking</li>
+                    <li style="font-size: 1em">Research</li>
+                    <li style="font-size: 1em">Problem Solving</li>
+                    <li style="font-size: 1em">Computers and Technology</li>
+                    <li style="font-size: 1em">Ability to Learn</li>
+                    <li style="font-size: 1em">Linux</li>
+                    <li style="font-size: 1em">Git</li>
+                </div>
+            </v-card>
         </div>
     </div>
 </template>
 
 <style scoped>
+.general {
+    margin-top: 30px;
+    display: grid;
+    grid-template-columns: auto auto;
+    row-gap: 10px;
+}
+
 @media (min-width: 800px) {
     .grid {
         display: grid;
-        grid-template-columns: 1fr 1fr;
+        grid-template-columns: 1fr 1fr 1fr;
         width: 100%;
         column-gap: 20px;
         row-gap: 20px;
@@ -88,6 +107,17 @@
         width: 100%;
         row-gap: 20px;
     }
+
+    .general {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        row-gap: 10px;
+    }
+}
+
+.container {
+    max-width: 900px;
 }
 
 .icons {
