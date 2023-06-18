@@ -7,9 +7,11 @@
             <v-card class="card" elevation="2">
                 <h2>Cloud</h2>
                 <div class="icons" style="">
+                    <img src="@/assets/img/svg/gcp.svg" />
                     <img src="@/assets/img/svg/aws.svg" />
                     <img src="@/assets/img/svg/vultr.svg" />
                 </div>
+                <p>GCP</p>
                 <ul>
                     AWS
                     <li>Compute</li>
