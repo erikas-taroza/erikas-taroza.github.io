@@ -12,14 +12,8 @@
                     <img src="@/assets/img/svg/vultr.svg" />
                 </div>
                 <p>GCP</p>
-                <ul>
-                    AWS
-                    <li>Compute</li>
-                </ul>
-                <ul>
-                    Vultr
-                    <li>Compute</li>
-                </ul>
+                <p>AWS</p>
+                <p>Vultr</p>
             </v-card>
 
             <v-card class="card" elevation="2">
