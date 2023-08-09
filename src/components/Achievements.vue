@@ -1,4 +1,8 @@
 <script setup lang="ts">
+import { useMediaQuery } from "@vueuse/core";
+
+const isMobile = useMediaQuery("(max-width: 600px)");
+
 function openGCPCert() {
     window.open("https://google.accredible.com/d1f16c18-c022-49d1-bbe2-b9cb34c828f0");
 }
@@ -13,7 +17,7 @@ function openGCPCert() {
                 <v-card-text>
                     After spending 1 month learning Google Cloud, I am now certified as an Associate Cloud Engineer.
                 </v-card-text>
-                <v-card-actions>
+                <v-card-actions v-if="!isMobile">
                     <v-btn color="primary" @click="openGCPCert">SEE CERTIFICATE</v-btn>
                 </v-card-actions>
             </div>
@@ -24,6 +28,9 @@ function openGCPCert() {
                 style="cursor: pointer"
                 @click="openGCPCert"
             />
+            <v-card-actions v-if="isMobile" style="align-self: flex-start; margin-top: 5px">
+                <v-btn color="primary" @click="openGCPCert">SEE CERTIFICATE</v-btn>
+            </v-card-actions>
         </v-card>
     </div>
 </template>
