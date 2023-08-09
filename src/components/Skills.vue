@@ -11,7 +11,7 @@
                     <img src="@/assets/img/svg/aws.svg" />
                     <img src="@/assets/img/svg/vultr.svg" />
                 </div>
-                <p>GCP</p>
+                <p>GCP (certified)</p>
                 <p>AWS</p>
                 <p>Vultr</p>
             </v-card>
