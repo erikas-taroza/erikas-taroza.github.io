@@ -1,0 +1,259 @@
+<head>
+    <title>Resume - Erikas Taroza</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap"
+        rel="stylesheet" />
+
+    <style>
+        * {
+            font-family: "Roboto", sans-serif;
+        }
+
+        body {
+            padding: 50px;
+            width: 800px;
+        }
+
+        p {
+            margin: 0px;
+        }
+
+        /* Section */
+
+        .section {
+            margin-top: 50px;
+        }
+
+        .section-title {
+            width: fit-content;
+            min-width: max-content;
+        }
+
+        .section-title h2 {
+            font-size: 1.3em;
+            margin: 0px;
+        }
+
+        .section-title-line {
+            background-color: black;
+            width: auto;
+            height: 3px;
+            margin-top: 5px;
+        }
+
+        /* Content */
+
+        .row {
+            display: flex;
+            flex-direction: row;
+        }
+
+        .grid {
+            display: grid;
+            grid-template-columns: 250px auto;
+            row-gap: 50px;
+        }
+
+        .grid * {
+            margin: 0px;
+        }
+
+        .description {
+            line-height: 150%;
+            font-size: 1em;
+            color: #434343;
+            margin-top: 10px;
+        }
+    </style>
+</head>
+
+<body style="background-color: #ffffff">
+    <h1 style="font-size: 3em; font-weight: bold; margin: 0px">Erikas Taroza</h1>
+
+    <!-- Profile -->
+    <div class="section">
+        <div class="section-title">
+            <h2>PROFILE</h2>
+            <div class="section-title-line"></div>
+        </div>
+
+        <p style="margin-top: 30px" id="about">
+            I am a self-taught software developer with proficiency in Flutter/Dart, Rust, C#, Git, and Linux. When I
+            discovered Flutter, I fell in love with its cross-platform capabilities and have used Flutter in numerous
+            projects. I am an active contributor to open source community, consistently fixing issues, adding new
+            features, or creating my own projects to help other developers. I am confident that my expertise and my
+            passion for creating innovative solutions would add great value to your team.
+        </p>
+    </div>
+
+    <!-- Experience -->
+    <div class="section">
+        <div class="section-title">
+            <h2>EXPERIENCE</h2>
+            <div class="section-title-line"></div>
+        </div>
+
+        <div class="grid" style="margin-top: 30px">
+            <strong>
+                <p style="font-size: 0.85em">January 2023 - Present</p>
+            </strong>
+            <div>
+                <h3 style="font-size: 1.1em">Full Stack Developer, IDMSRTV (Startup)</h3>
+                <ul class="description">
+                    <li>
+                        Drive strategy for website development
+                        <ul class="description" style="margin-top: 0px">
+                            <li>Rewrote WordPress website with improved styling and functionality</li>
+                            <li>Vue (front-end)</li>
+                            <li>Rust + Docker (back-end)</li>
+                        </ul>
+                    </li>
+                    <li>Identified and implemented modern technologies to get the beta website to market faster</li>
+                    <li>Collaborated with cross functional team leaders to define project scope and timelines</li>
+
+                    <li>
+                        Added ecommerce functionality to order form for customer demo purposes
+                        <ul class="description" style="margin-top: 0px">
+                            <li>WordPress, PHP</li>
+                            <li>Raw JavaScript/HTML/CSS</li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+
+            <strong>
+                <p style="font-size: 0.85em">October 2022 - December 2022</p>
+            </strong>
+            <div>
+                <h3 style="font-size: 1.1em">Intern Web Developer, Deidis (Startup)</h3>
+                <ul class="description">
+                    <li>Developed widget to provide clients an easy way to capture leads</li>
+                    <li>React (front-end)</li>
+                    <li>NodeJS (back-end)</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <!-- Achievements -->
+    <div class="section">
+        <div class="section-title">
+            <h2>ACHIEVEMENTS</h2>
+            <div class="section-title-line"></div>
+        </div>
+
+        <div style="margin-top: 30px">
+            <div>
+                <h3 style="font-size: 1.1em">Google Cloud Certified</h3>
+                <p class="description" style="margin-bottom: 5px;">
+                    After spending 1 month learning Google Cloud, I am now certified as an Associate Cloud Engineer.
+                </p>
+                <a href="https://google.accredible.com/d1f16c18-c022-49d1-bbe2-b9cb34c828f0" target="_blank"
+                    class="description" style="color: rgb(244, 67, 54)">
+                    See Certificate
+                </a>
+            </div>
+        </div>
+
+        <!-- Projects -->
+        <div class="section">
+            <div class="section-title">
+                <h2>PROJECTS</h2>
+                <div class="section-title-line"></div>
+            </div>
+
+            <div class="grid" style="margin-top: 30px">
+                <strong>
+                    <p style="font-size: 0.85em">October 2022 - Present</p>
+                </strong>
+                <div>
+                    <h3 style="font-size: 1.1em">simple_audio</h3>
+                    <ul class="description">
+                        <li>A simple cross-platform solution for playing audio in Flutter</li>
+                        <li>Rust</li>
+                        <li>Open source</li>
+                    </ul>
+                </div>
+
+                <strong>
+                    <p style="font-size: 0.85em">May 2022 - Present</p>
+                </strong>
+                <div>
+                    <h3 style="font-size: 1.1em">BitBeat</h3>
+                    <ul class="description">
+                        <li>Music streaming app with no ads</li>
+                        <li>Flutter (front-end)</li>
+                        <li>Rust (back-end)</li>
+                        <li>Vue (back-end forms)</li>
+                        <li>Docker</li>
+                    </ul>
+                </div>
+
+                <strong>
+                    <p style="font-size: 0.85em">December 2020 - Present</p>
+                </strong>
+                <div>
+                    <h3 style="font-size: 1.1em">Open Source</h3>
+                    <p class="description">
+                        Contributing to open source projects by fixing issues, adding new features, or creating my own
+                        open
+                        source projects.
+                    </p>
+                    <div class="row">
+                        <p class="description">See my work here:</p>
+                        <a class="description" style="margin-left: 5px" href="https://github.com/erikas-taroza"
+                            target="_blank">
+                            https://github.com/erikas-taroza
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Education -->
+        <div class="section">
+            <div class="section-title">
+                <h2>EDUCATION</h2>
+                <div class="section-title-line"></div>
+            </div>
+
+            <div class="grid" style="margin-top: 30px">
+                <strong>
+                    <p style="font-size: 0.85em">July 2019 - January 2023</p>
+                </strong>
+                <div>
+                    <h3 style="font-size: 1.1em">Laurel Springs School</h3>
+                    <p class="description">High School</p>
+                    <ul style="color: #434343; margin-top: 10px; line-height: 150%">
+                        <li>3.75 GPA (3.90 weighted)</li>
+                        <li>AP Computer Science (4/5 on AP exam)</li>
+                    </ul>
+                </div>
+
+                <strong>
+                    <p style="font-size: 0.85em">July 2016 - Present</p>
+                </strong>
+                <div>
+                    <h3 style="font-size: 1.1em">Self-Taught</h3>
+                    <p class="description">I taught myself everything I know about programming.</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Skills -->
+        <div class="section">
+            <div class="section-title">
+                <h2>SKILLS</h2>
+                <div class="section-title-line"></div>
+            </div>
+
+            <div style="margin-top: 30px; display: grid; grid-template-columns: 250px 250px 250px; row-gap: 10px">
+                <li style="font-size: 1em">Critical Thinking</li>
+                <li style="font-size: 1em">Research</li>
+                <li style="font-size: 1em">Problem Solving</li>
+                <li style="font-size: 1em">Computers and Technology</li>
+                <li style="font-size: 1em">Ability to Learn</li>
+                <li style="font-size: 1em">Linux</li>
+                <li style="font-size: 1em">Git</li>
+            </div>
+        </div>
+</body>
