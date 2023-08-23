@@ -17,14 +17,14 @@ const message = ref("");
 
 const formRef = ref();
 
-function validateInput(input: String | null): string | boolean {
-    if (input == null) return true;
+function validateInput(input: string | undefined): true | string {
+    if (input == undefined) return true;
     if (input.trim().length <= 0) return "This field is required.";
     return true;
 }
 
-function validateEmail(input: String | null): string | boolean {
-    if (input == null) return true;
+function validateEmail(input: string | undefined): true | string {
+    if (input == undefined) return true;
     if (input.trim().length <= 0) return "This field is required.";
     const regex = RegExp(String.raw`[a-z0-9]+@[a-z]+\.[a-z]{2,3}`);
     if (!regex.test(input.toString())) return "Please enter a valid email address.";
