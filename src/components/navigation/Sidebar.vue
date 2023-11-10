@@ -27,7 +27,7 @@ defineEmits<{
                     :color="activeButton == button ? 'primary' : undefined"
                     :active="activeButton == button"
                     width="95%"
-                    @click="$emit('buttonPressed', button)"
+                    @click="$emit('buttonPressed', button.toString())"
                 >
                     {{ button }}
                 </v-btn>
