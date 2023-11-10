@@ -53,10 +53,10 @@
                 </div>
                 <p class="bold-red-text">Frontend</p>
                 <p>Dart</p>
-                <p>JavaScript</p>
+                <p>JavaScript/TypeScript</p>
                 <p class="bold-red-text">Backend</p>
                 <p>Rust</p>
-                <p>JavaScript</p>
+                <p>JavaScript/TypeScript</p>
                 <p class="bold-red-text">Other</p>
                 <p>C#</p>
                 <p>Java</p>
