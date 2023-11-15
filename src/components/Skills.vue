@@ -33,12 +33,12 @@
                     <img src="@/assets/img/svg/mysql.svg" />
                 </div>
                 <p class="bold-red-text">Frameworks</p>
-                <p>Axum</p>
                 <p>Express.js</p>
+                <p>Axum</p>
                 <p>Parse Server</p>
                 <p class="bold-red-text">Databases</p>
-                <p>SurrealDB</p>
                 <p>MySQL</p>
+                <p>SurrealDB</p>
             </v-card>
 
             <v-card class="card" elevation="2" style="grid-column-end: span 3">
