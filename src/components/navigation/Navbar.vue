@@ -31,7 +31,7 @@ function onResize() {
 }
 
 const activeButton = ref("Home");
-const buttons = ["Home", "Skills", "Achievements", "Projects", "Contact"];
+const buttons = ["Home", "Skills", "Certifications", "Projects", "Contact"];
 
 function goTo(id: string) {
     let element = document.getElementById(id);

@@ -3,7 +3,7 @@ import Navbar from "../components/navigation/Navbar.vue";
 import Profile from "../components/Profile.vue";
 import Info from "../components/Info.vue";
 import Skills from "../components/Skills.vue";
-import Achievements from "../components/Achievements.vue";
+import Certifications from "@/components/Certifications.vue";
 import Projects from "../components/Projects.vue";
 import Contact from "../components/Contact.vue";
 </script>
@@ -17,7 +17,7 @@ import Contact from "../components/Contact.vue";
             <Info />
         </div>
         <Skills id="Skills" />
-        <Achievements id="Achievements" />
+        <Certifications id="Certifications" />
         <Projects id="Projects" />
         <Contact id="Contact" />
     </div>

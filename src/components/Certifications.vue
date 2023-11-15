@@ -10,7 +10,7 @@ function openGCPCert() {
 
 <template>
     <div class="container">
-        <h1 class="section-title">Achievements</h1>
+        <h1 class="section-title">Certifications</h1>
         <v-card class="card" elevation="2">
             <div style="display: flex; flex-direction: column">
                 <v-card-title>Google Cloud Certified</v-card-title>
