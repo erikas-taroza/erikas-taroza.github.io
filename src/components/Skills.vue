@@ -41,7 +41,7 @@
                 <p>MySQL</p>
             </v-card>
 
-            <v-card class="card" elevation="2">
+            <v-card class="card" elevation="2" style="grid-column-end: span 3">
                 <h2>Languages</h2>
                 <div class="icons">
                     <img src="@/assets/img/svg/dart.svg" />
@@ -51,27 +51,23 @@
                     <img src="@/assets/img/svg/java.svg" />
                     <img src="@/assets/img/svg/python.svg" />
                 </div>
-                <p class="bold-red-text">Frontend</p>
-                <p>Dart</p>
-                <p>JavaScript/TypeScript</p>
-                <p class="bold-red-text">Backend</p>
-                <p>Rust</p>
-                <p>JavaScript/TypeScript</p>
-                <p class="bold-red-text">Other</p>
-                <p>C#</p>
-                <p>Java</p>
-                <p>Python</p>
-            </v-card>
-            <v-card class="card" elevation="2" style="grid-column-end: span 2">
-                <h2>General</h2>
-                <div class="general">
-                    <li style="font-size: 1em">Critical Thinking</li>
-                    <li style="font-size: 1em">Research</li>
-                    <li style="font-size: 1em">Problem Solving</li>
-                    <li style="font-size: 1em">Computers and Technology</li>
-                    <li style="font-size: 1em">Ability to Learn</li>
-                    <li style="font-size: 1em">Linux</li>
-                    <li style="font-size: 1em">Git</li>
+                <div class="grid">
+                    <div>
+                        <p class="bold-red-text">Frontend</p>
+                        <p>Dart</p>
+                        <p>JavaScript/TypeScript</p>
+                    </div>
+                    <div>
+                        <p class="bold-red-text">Backend</p>
+                        <p>Rust</p>
+                        <p>JavaScript/TypeScript</p>
+                    </div>
+                    <div>
+                        <p class="bold-red-text">Other</p>
+                        <p>C#</p>
+                        <p>Java</p>
+                        <p>Python</p>
+                    </div>
                 </div>
             </v-card>
         </div>
