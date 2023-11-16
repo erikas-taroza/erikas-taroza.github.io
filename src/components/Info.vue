@@ -1,8 +1,6 @@
 <script setup lang="ts">
 import router from "@/router";
-import resume from "@/assets/resume/resume.html?raw";
-
-const aboutText = resume.split('<p style="margin-top: 30px" id="about">')[1].split("</p>")[0];
+import resumePdf from "@/assets/resume/resume.pdf";
 
 // Used for the "Contact Me" button.
 function goTo(id: string) {
@@ -11,12 +9,6 @@ function goTo(id: string) {
 
     window.scrollTo(0, element.offsetTop);
 }
-
-function goToCV() {
-    router.push({
-        name: "cv",
-    });
-}
 </script>
 
 <template>
@@ -24,11 +16,17 @@ function goToCV() {
         <v-card class="card" elevation="2" style="max-width: 900px">
             <div class="bio">
                 <p><strong>Hello! I'm Erikas Taroza</strong></p>
-                <p>{{ aboutText }}</p>
+                <p>
+                    I am an experienced software developer with a diverse set of skills including Flutter/Dart, web
+                    development, Git, and Linux. My journey in software development is marked by my drive to constantly
+                    grow my skills and my commitment to excellence. I am also an active contributor to the open-source
+                    community. I maintain my own projects as well as help fix various bugs in other open-source
+                    projects.
+                </p>
 
                 <div style="margin-top: 20px">
-                    <v-btn color="primary" variant="flat" style="margin-right: 20px" @click="goToCV()">
-                        Go to CV
+                    <v-btn color="primary" variant="flat" style="margin-right: 20px" download :href="resumePdf">
+                        Download CV (PDF)
                     </v-btn>
 
                     <v-btn color="#EEEEEE" variant="flat" @click="goTo('Contact')"> Contact Me </v-btn>
