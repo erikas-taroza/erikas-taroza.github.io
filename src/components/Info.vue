@@ -1,5 +1,4 @@
 <script setup lang="ts">
-import router from "@/router";
 import resumePdf from "@/assets/resume/resume.pdf";
 
 // Used for the "Contact Me" button.
