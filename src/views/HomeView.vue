@@ -2,7 +2,8 @@
 const search = defineModel<string>();
 
 function doSearch() {
-  window.location.href = `https://duckduckgo.com/?q=${search.value}`;
+  if (search.value?.length == 0 || !search.value) return;
+  window.location.href = `https://duckduckgo.com/?q=${encodeURIComponent(search.value)}`;
 }
 </script>
 
