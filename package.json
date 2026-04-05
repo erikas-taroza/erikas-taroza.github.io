@@ -10,8 +10,7 @@
     "build-only": "vite build",
     "type-check": "vue-tsc --build --force",
     "lint": "eslint . --fix --cache",
-    "format": "prettier --write --experimental-cli src/",
-    "deploy": "run-p build && gh-pages -d dist"
+    "format": "prettier --write --experimental-cli src/"
   },
   "dependencies": {
     "@fontsource-variable/source-code-pro": "^5.2.7",
