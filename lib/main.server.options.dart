@@ -5,8 +5,7 @@
 // Generated with jaspr_builder
 
 import 'package:jaspr/server.dart';
-import 'package:website/components/counter.dart' as _counter;
-import 'package:website/pages/about.dart' as _about;
+import 'package:website/components/text_field.dart' as _text_field;
 import 'package:website/app.dart' as _app;
 
 /// Default [ServerOptions] for use with your Jaspr project.
@@ -28,9 +27,5 @@ import 'package:website/app.dart' as _app;
 ServerOptions get defaultServerOptions => ServerOptions(
   clientId: 'main.client.dart.js',
   clients: {_app.App: ClientTarget<_app.App>('app')},
-  styles: () => [
-    ..._counter.CounterState.styles,
-    ..._about.About.styles,
-    ..._app.AppState.styles,
-  ],
+  styles: () => [..._text_field.TextField.styles, ..._app.AppState.styles],
 );

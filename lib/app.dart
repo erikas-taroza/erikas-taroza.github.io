@@ -1,16 +1,9 @@
 import "package:jaspr/dom.dart";
 import "package:jaspr/jaspr.dart";
+import "package:universal_web/web.dart";
 
-import "pages/about.dart";
-import "pages/home.dart";
+import "components/text_field.dart";
 
-// The main component of your application.
-//
-// By using the @client annotation this component will be automatically compiled to javascript and mounted
-// on the client. Therefore:
-// - this file and any imported file must be compilable for both server and client environments.
-// - this component and any child components will be built once on the server during pre-rendering and then
-//   again on the client during normal rendering.
 @client
 class App extends StatefulComponent {
   const App({super.key});
@@ -20,53 +13,46 @@ class App extends StatefulComponent {
 }
 
 class AppState extends State<App> {
+  void onEnter(String text) {
+    if (text.isEmpty) return;
+    // Go straight to website with prefix.
+    if (text.substring(0, 1) == ":") {
+      window.location.href = "https://${text.substring(1)}";
+      return;
+    }
 
-  @override
-  void initState() {
-    super.initState();
-    // Run code depending on the rendering environment.
-    if (kIsWeb) {
-      print("Hello client");
-      // When using @client components there is no default `main()` function on the client where you would normally
-      // run any client-side initialization logic. Instead you can put it here, considering this component is only
-      // mounted once at the root of your client-side component tree.
-    } else {
-      print("Hello server");
+    Uri? uri = Uri.tryParse(text);
+    // Full URL
+    if (uri != null && uri.hasScheme && uri.hasAuthority) {
+      window.location.href = uri.toString();
+    }
+    // Search query
+    else {
+      window.location.href = "https://duckduckgo.com/?q=${Uri.encodeComponent(text)}";
     }
   }
 
   @override
   Component build(BuildContext context) {
-    // This method is rerun every time the component is rebuilt.
-    
-    // Renders a <div class="main"> html element with children.
     return div(classes: "main", [
-      const Home(),
-      const About(),
+      h1([.text("Erikas Taroza")]),
+      TextField(onEnter: onEnter, hint: "Search DuckDuckGo or enter URL", width: 40.vw),
+      p([.text("Prefix with `:` to go to a website.")]),
     ]);
   }
 
-  // Defines the css styles for elements of this component.
-  //
-  // By using the @css annotation, these will be rendered automatically to css inside the <head> of your page.
-  // Must be a variable or getter of type [List<StyleRule>].
   @css
   static List<StyleRule> get styles => [
     css(".main", [
-      // The '&' refers to the parent selector of a nested style rules.
       css("&").styles(
         display: .flex,
-        height: 100.vh,
-        flexDirection: .row,
-        flexWrap: .wrap,
-      ),
-      css("section").styles(
-        display: .flex,
         flexDirection: .column,
+        flexWrap: .wrap,
         justifyContent: .center,
         alignItems: .center,
-        flex: Flex(grow: 1, shrink: 0, basis: 400.px),
+        margin: Spacing.only(top: 25.vh),
       ),
+      css("p").styles(color: Colors.gray),
     ]),
   ];
 }
