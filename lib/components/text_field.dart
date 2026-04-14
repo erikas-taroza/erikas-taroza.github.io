@@ -27,7 +27,7 @@ class TextField extends StatefulComponent {
 
     return [
       css(".filled", [
-        css("&").styles(position: .relative()),
+        css("&").styles(position: .relative(), textAlign: .left),
         css("input", [
           css("&").styles(
             backgroundColor: Color("#1b1b1b"),

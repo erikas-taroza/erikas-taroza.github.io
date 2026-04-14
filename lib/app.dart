@@ -36,6 +36,7 @@ class AppState extends State<App> {
   Component build(BuildContext context) {
     return div(classes: "main", [
       h1([.text("Erikas Taroza")]),
+      p(classes: "description", [.text("Landing Page")]),
       TextField(onEnter: onEnter, hint: "Search DuckDuckGo or enter URL", width: 40.vw),
       p([.text("Prefix with `:` to go to a website.")]),
     ]);
@@ -51,8 +52,14 @@ class AppState extends State<App> {
         justifyContent: .center,
         alignItems: .center,
         margin: Spacing.only(top: 25.vh),
+        textAlign: .center,
       ),
-      css("p").styles(color: Colors.gray),
+      css("p").styles(
+        color: Colors.gray,
+        fontSize: 12.px,
+      ),
+      css("h1").styles(margin: Spacing.only(bottom: 0.px)),
+      css(".description").styles(margin: Spacing.only(top: 0.px)),
     ]),
   ];
 }
