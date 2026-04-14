@@ -37,7 +37,7 @@ class TextField extends StatefulComponent {
               left: BorderSide.none(),
               right: BorderSide.none(),
             ),
-            transition: Transition("all", duration: Duration(milliseconds: 500)),
+            transition: Transition("all", duration: Duration(milliseconds: 200), curve: Curve.ease),
             outline: Outline.unset,
             padding: Spacing.fromLTRB(10.px, 15.px, 10.px, 5.px),
             radius: BorderRadius.only(topLeft: Radius.circular(5.px), topRight: Radius.circular(5.px)),
